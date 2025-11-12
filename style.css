@@ -199,6 +199,7 @@ body{
 }
 
 .btn.ghost {
+    color: black;
   background: transparent;
   border: 2px solid rgba(0, 0, 0, 0.06);
 }
@@ -212,12 +213,12 @@ body{
 }
 .btn.primary {
   background: #c8102e;
-  color: white;
+  color: ghostwhite;
 }
 .btn.primary:hover{
     scale: 1.1;
     background: var(--secondary-color);
-    color: ghostwhite;
+    color: black;
 }
 .btn.primary:active{
     scale: 0.9;
