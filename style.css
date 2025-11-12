@@ -265,6 +265,7 @@ header {
     }
 
     .feature-card {
+        cursor: pointer;
       background: #fff;
       border-radius: 15px;
       padding: 25px;
@@ -324,6 +325,7 @@ header {
 }
 
 .card {
+    cursor: pointer;
   background: white;
   border-radius: 14px;
   padding: 20px;
@@ -436,6 +438,7 @@ header {
   }
 
   .country {
+    cursor: pointer;
     background: white;
     border-radius: 14px;
     overflow: hidden;
