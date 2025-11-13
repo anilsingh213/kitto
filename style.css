@@ -129,12 +129,12 @@ body{
 }
 .kitkat{
     position: absolute;
-    width: 550px;
-    right: 100px;
+    width: 750px;
+    right: 0px;
     pointer-events: none;
     filter: drop-shadow(0 0 100px var(--secondary-color));
     animation: animeimage 1s ease forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
     transform: scale(0);
 }
 @keyframes anime {
@@ -156,7 +156,9 @@ body{
         transform: translateX(0%);
     }
 }
-
+@keyframes choco {
+  
+}
 
 /* page-2 */
 .break-strip {
