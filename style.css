@@ -17,6 +17,10 @@ body{
       --dark: #2b2b2b;
       --muted: #6b6b6b;
       --bg: #fff8f8;
+       /* --kitkat-red: #c8102e; */
+    --kitkat-dark: #111;
+    --kitkat-light: #ffffff;
+    --grey: #f4f4f4;
 }
 .navbar{
     position: fixed;
@@ -360,7 +364,6 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
- /* transform: rotate(60deg); */
 }
 .thumb3 {
   height: 350px;
@@ -370,7 +373,6 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  /* transform: rotate(120deg); */
   scale: ;
 }
 .badge {
@@ -458,7 +460,6 @@ header {
     width: 100%;
     height: 180px;
     scale: 0.6;
-    /* object-fit: cover; */
   }
   .country #hh{
     font-size: 130px;
@@ -482,95 +483,127 @@ header {
 
 
   /* page-6 */
-    header {
-    background: var(--kitkat-red);
-    color: white;
-    text-align: center;
-    padding: 25px 10px;
+   footer {
+    background: var(--kitkat-dark);
+    color: var(--kitkat-light);
+    padding: 70px 8% 30px;
   }
 
-  header h1 {
-    font-size: 30px;
+  .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
   }
 
-  header p {
+  .footer-logo h2 {
+    color: var(--kitkat-red);
+    font-size: 34px;
+    margin-bottom: 15px;
+    font-weight: 800;
+  }
+
+  .footer-logo p {
     font-size: 15px;
-    opacity: 0.9;
+    line-height: 1.8;
+    color: #ddd;
+    max-width: 380px;
   }
 
-  .contact {
-    max-width: 1000px;
-    margin: 50px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  .footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
   }
 
-  .contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 26px;
-  }
-
-  .contact p {
-    text-align: center;
-    color: #555;
-    margin-bottom: 30px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  label {
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1.5px solid #ccc;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: border 0.3s ease;
-  }
-
-  input:focus, textarea:focus {
-    border-color: var(--kitkat-red);
-    outline: none;
-  }
-
-  textarea {
-    resize: none;
-    height: 120px;
-  }
-
-  button {
+  .footer-col h3::after {
+    content: "";
+    width: 40px;
+    height: 2px;
     background: var(--kitkat-red);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
   }
 
-  button:hover {
-    background: #a30e26;
-    scale: 1.03;
+  .footer-col ul {
+    list-style: none;
   }
- button:active {
-    scale: 0.96;
+
+  .footer-col ul li {
+    margin: 10px 0;
   }
+
+  .footer-col ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .footer-col ul li a:hover {
+    color: var(--kitkat-red);
+    padding-left: 4px;
+  }
+
+  .social-links a {
+    display: inline-block;
+    color: var(--kitkat-light);
+    font-size: 20px;
+    margin-right: 12px;
+    transition: transform 0.3s ease, color 0.3s;
+  }
+
+  .social-links a:hover {
+    color: var(--kitkat-red);
+    transform: scale(1.2);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    padding: 20px 50px;
+    font-size: 17px;
+    color: #ccc;
+    background-color: var(--kitkat-red);
+  }
+
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .footer-logo h2 {
+      font-size: 30px;
+    }
+
+    .footer-col h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .footer-logo p {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .social-links a {
+      margin: 10px;
+      padding-left: 40%;
+    }
+  }
+
   .social {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .social h3 {
@@ -589,19 +622,4 @@ header {
 
   .icons a:hover {
     transform: scale(1.1);
-  }
-
-  footer {
-    background: var(--kitkat-red);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 14px;
-  }
-
-  @media (max-width: 768px) {
-    .contact {
-      padding: 25px;
-    }
   }
