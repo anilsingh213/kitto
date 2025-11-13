@@ -24,7 +24,7 @@ body{
     left: 0;
     height: 110px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.731);
+    background-color: var(--kitkat-red);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +37,7 @@ body{
     bottom: -5px;
     width: 0%;
     height: 2.5px;
-    background-color: var(--primary-color);
+    background-color: ghostwhite;
     transition: all ease 0.3s;
 }
 .navbar #bar h3:hover::before,
@@ -45,7 +45,7 @@ body{
      width: 70%;
 }
 #logo img{
-   height: 80px;
+   height: 120px;
    cursor: pointer;
    animation: anime 1s ease forwards;
 }
@@ -55,7 +55,7 @@ body{
 }
 #bar h3{
     font-size: 25px;
-    color: var(--primary-color);
+    color: ghostwhite;
     text-decoration: none;
     position: relative;
     display: flex;
